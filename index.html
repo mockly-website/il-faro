@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo Zen — Spaghetteria di famiglia a Oristano</title>
+  <meta name="description" content="Lo Zen, la spaghetteria di famiglia di Oristano. Pasta di mare e di terra, porzioni abbondanti, prezzi onesti. Via Umbria 5 — Prenota: 0783 210440">
+  <meta name="theme-color" content="#16130e">
+  <meta property="og:title" content="Lo Zen — Spaghetteria a Oristano">
+  <meta property="og:description" content="Cucina di mare e di terra. Non solo spaghetteria. Via Umbria 5, Oristano.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="frame-counter" aria-hidden="true"><span id="sceneCounter">INQ 01</span><span id="sceneTotal">/ 06</span></div>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <p class="preloader-brand">LO<span>·</span>ZEN</p>
+    <p class="preloader-sub">spaghetteria · oristano</p>
+    <div class="preloader-bar"><span></span></div>
+  </div>
+
+  <header class="header" id="header">
+    <a href="#top" class="brand" aria-label="Lo Zen — torna all'inizio">
+      LO ZEN
+      <small>spaghetteria · oristano</small>
+    </a>
+    <nav class="nav" aria-label="Navigazione principale">
+      <a href="#storia">La storia</a>
+      <a href="#menu">Il menù</a>
+      <a href="#critiche">La critica</a>
+      <a href="#sala">La sala</a>
+      <a class="nav-cta" href="tel:+390783210440">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Prenota
+      </a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="menuMobile">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu-mobile" id="menuMobile" hidden>
+    <nav aria-label="Navigazione mobile">
+      <a href="#storia"><em>01</em>La storia</a>
+      <a href="#menu"><em>02</em>Il menù</a>
+      <a href="#critiche"><em>03</em>La critica</a>
+      <a href="#sala"><em>04</em>La sala</a>
+      <a class="menu-mobile-cta" href="tel:+390783210440">Prenota un tavolo</a>
+    </nav>
+  </div>
+
+  <main id="top">
+
+    <section class="scene hero" id="hero" data-scene="01">
+      <div class="hero-inner">
+        <p class="hero-overline reveal">una produzione della famiglia Racis · oristano, sardegna</p>
+        <h1 class="hero-title">
+          <span class="hero-lo outline-text reveal">LO</span>
+          <span class="hero-zen reveal">ZEN</span>
+        </h1>
+        <p class="hero-tagline reveal">
+          C'era una volta una spaghetteria dove il mare finiva nel piatto<br class="line-break-desktop">
+          e il tempo, a tavola, smetteva di correre.
+        </p>
+        <div class="hero-meta reveal">
+          <span>cucina di mare e di terra</span>
+          <span class="meta-sep">·</span>
+          <span>via umbria 5</span>
+          <span class="meta-sep">·</span>
+          <span>non solo spaghetteria!!</span>
+        </div>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="tel:+390783210440">
+            <span class="btn-play">▶</span> Ciak — prenota un tavolo
+          </a>
+          <a class="btn btn-ghost" href="#storia">Scorri i titoli di testa ↓</a>
+        </div>
+        <div class="hero-svg" aria-hidden="true">
+          <svg viewBox="0 0 320 320">
+            <g class="swirl">
+              <path d="M160 60 c 46 6 58 52 24 70 c -38 20 -88 -16 -62 -58 c 22 -36 88 -18 84 34 c -3 48 -72 56 -96 18 c -24 -40 18 -88 62 -74" fill="none" stroke="#f2ead9" stroke-width="7" stroke-linecap="round"/>
+              <path d="M160 60 c 46 6 58 52 24 70 c -38 20 -88 -16 -62 -58 c 22 -36 88 -18 84 34 c -3 48 -72 56 -96 18 c -24 -40 18 -88 62 -74" fill="none" stroke="#c83e1f" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <g class="fork">
+              <path d="M118 118 L126 214" stroke="#f2ead9" stroke-width="9" stroke-linecap="round"/>
+              <path d="M142 118 L150 214" stroke="#f2ead9" stroke-width="9" stroke-linecap="round"/>
+              <path d="M166 118 L174 214" stroke="#f2ead9" stroke-width="9" stroke-linecap="round"/>
+              <path d="M190 118 L198 214" stroke="#f2ead9" stroke-width="9" stroke-linecap="round"/>
+              <path d="M102 118 C 102 88 206 88 206 118 L 202 128 C 198 104 110 104 106 128 Z" fill="#f2ead9"/>
+              <path d="M104 128 C 104 122 204 122 204 128 L 202 134 L 106 134 Z" fill="#f2ead9"/>
+            </g>
+            <circle cx="232" cy="118" r="6" fill="#c83e1f"/>
+            <circle cx="84" cy="150" r="5" fill="#c29a4b"/>
+          </svg>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Inquadratura 01 — scorri</span>
+        <span class="scroll-line"></span>
+      </div>
+      <div class="letterbox letterbox-bottom" aria-hidden="true"></div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>spaghetti allo scoglio ★</span>
+        <span>risotto alla pescatora ★</span>
+        <span>arselle e bottarga ★</span>
+        <span>frittura di calamari ★</span>
+        <span>fregola sarda ★</span>
+        <span>zuppa di cozze ★</span>
+        <span>seadas al miele ★</span>
+        <span>carbonara ★</span>
+        <span>spaghetti allo scoglio ★</span>
+        <span>risotto alla pescatora ★</span>
+        <span>arselle e bottarga ★</span>
+        <span>frittura di calamari ★</span>
+        <span>fregola sarda ★</span>
+        <span>zuppa di cozze ★</span>
+        <span>seadas al miele ★</span>
+        <span>carbonara ★</span>
+      </div>
+    </div>
+
+    <div class="filmstrip" aria-hidden="true"></div>
+
+    <section class="scene story" id="storia" data-scene="02">
+      <div class="scene-head reveal">
+        <p class="kicker">scena 02</p>
+        <h2>Tre fratelli, un'isola, <em>un piatto</em>.</h2>
+      </div>
+      <span class="scene-number" aria-hidden="true">02</span>
+
+      <div class="story-body">
+        <p class="story-lead reveal">
+          Tre fratelli, una sala, un'isola intera da sfamare. Cristina, Samuele e Federico hanno
+          trasformato una spaghetteria di quartiere nel posto dove Oristano viene a cena — e torna.
+        </p>
+        <p class="story-text reveal">
+          Qui il pesce arriva al mattino dal mercato, la bottarga profuma di stagione e ogni piatto
+          viene girato in un'unica scena: la tua tavola. Porzioni da protagonista, prezzi da
+          comparsa onesta, e una regola che non è mai andata in doppia: <em>mangiare bene deve restare semplice.</em>
+        </p>
+        <blockquote class="story-quote reveal">
+          <p>«Non solo spaghetteria!!»</p>
+          <cite>— dicono loro. E lo dicono da una vita.</cite>
+        </blockquote>
+      </div>
+
+      <div class="cast">
+        <article class="cast-card reveal">
+          <div class="cast-role">regia</div>
+          <div class="cast-monogram" aria-hidden="true">C</div>
+          <h3>Cristina Racis</h3>
+          <p>La padrona di casa. La sala è il suo set: accoglie, ricorda i nomi, non lascia mai un tavolo senza attenzione.</p>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-role">fotografia</div>
+          <div class="cast-monogram" aria-hidden="true">S</div>
+          <h3>Samuele Racis</h3>
+          <p>Tra i fornelli, il mare di Sardegna diventa sugo. Niente mezze misure: il piatto o è da protagonista, o non esce.</p>
+        </article>
+        <article class="cast-card reveal">
+          <div class="cast-role">montaggio</div>
+          <div class="cast-monogram" aria-hidden="true">F</div>
+          <h3>Federico Racis</h3>
+          <p>L'uomo di sala. Insieme ai fratelli tiene viva la promessa del locale: mangiare bene, pagare onesto.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene menu" id="menu" data-scene="03">
+      <div class="scene-head reveal">
+        <p class="kicker">scena 03</p>
+        <h2>La filmografia <em>del gusto</em>.</h2>
+        <p class="scene-sub">Il menù cambia come le scene di un film: chiedete alla sala cosa gira oggi.</p>
+      </div>
+      <span class="scene-number" aria-hidden="true">03</span>
+
+      <div class="menu-columns">
+        <div class="menu-column reveal">
+          <h3 class="menu-cat">Primi <small>le scene madri</small></h3>
+          <details class="dish">
+            <summary>Spaghetti allo Scoglio <span class="dish-tag">bestseller</span></summary>
+            <p>Il protagonista. Il mare, tutto intero, in un piatto: cozze, arselle, seppie e un filo di olio che non discute.</p>
+          </details>
+          <details class="dish">
+            <summary>Spaghetti con Arselle e Bottarga</summary>
+            <p>La rivelazione. Il giallo della bottarga sopra il sale delle arselle: un sospetto solo — quanto sarà buono?</p>
+          </details>
+          <details class="dish">
+            <summary>Risotto alla Pescatora <span class="dish-tag">bestseller</span></summary>
+            <p>L'antagonista gentile. Cremoso, profondo, senza fretta: un lungo piano sequenza sul palato.</p>
+          </details>
+          <details class="dish">
+            <summary>Spaghetti ai Frutti di Mare</summary>
+            <p>Compagnia di scena al completo: vongole, cozze, gamberi e seppie in un'interpretazione corale.</p>
+          </details>
+          <details class="dish">
+            <summary>Spaghetti al Tonno e Cipolla</summary>
+            <p>Scena di mare, girata in terra. Dolce, sapida, memorabile. Il classico che non invecchia.</p>
+          </details>
+          <details class="dish">
+            <summary>Mezze Penne all'Aragostine</summary>
+            <p>Un cameo da copertina: la pasta corta che ruba la scena ai più famosi.</p>
+          </details>
+          <details class="dish">
+            <summary>Pasta Panna e Salmone</summary>
+            <p>Il cavallo di battaglia del pubblico: morbido, rosa, confortevole come un film di sempre.</p>
+          </details>
+          <details class="dish">
+            <summary>Spaghetti alla Carbonara <span class="dish-tag">cult</span></summary>
+            <p>Il cult senza compromessi, come da manuale romano. Il pubblico lo chiede sempre, ed è sempre lì.</p>
+          </details>
+          <details class="dish">
+            <summary>Spaghetti all'Arrabbiata</summary>
+            <p>Quando la pellicola si fa piccante. Da guardare con un bicchiere di vino della casa a portata di mano.</p>
+          </details>
+        </div>
+
+        <div class="menu-column reveal">
+          <h3 class="menu-cat">Dal mare <small>gli esterni</small></h3>
+          <details class="dish">
+            <summary>Fregola con le Arselle</summary>
+            <p>La tradizione sarda in prima visione. Granelli d'oro che affondano in un brodo che sa di isola.</p>
+          </details>
+          <details class="dish">
+            <summary>Zuppa di Cozze in Rosso</summary>
+            <p>In rosso, come il tappeto di un festival. Con pane da intingere e zero rimorsi.</p>
+          </details>
+          <details class="dish">
+            <summary>Frittura di Calamari <span class="dish-tag">bestseller</span></summary>
+            <p>La colonna sonora croccante del locale. Si comincia, non si smette più.</p>
+          </details>
+          <h3 class="menu-cat menu-cat-second">Terra & dolci <small>i lieti fini</small></h3>
+          <details class="dish">
+            <summary>Bistecca di Cavallo</summary>
+            <p>Il secondo che non ti aspetti, e che non dimentichi. Per chi ama le svolte di sceneggiatura.</p>
+          </details>
+          <details class="dish">
+            <summary>Seadas al Miele <span class="dish-tag">finale</span></summary>
+            <p>Finale dolce, di quelli sardi veri: formaggio fuso, miele caldo, applausi garantiti.</p>
+          </details>
+          <details class="dish">
+            <summary>Tiramisù della casa</summary>
+            <p>Il lieto fine per eccellenza. Soffice, goloso, senza colpe.</p>
+          </details>
+          <details class="dish">
+            <summary>Panna Cotta</summary>
+            <p>I titoli di coda, in versione morbida. Da gustare lentamente.</p>
+          </details>
+        </div>
+      </div>
+
+      <p class="menu-footnote reveal">Prezzo medio a persona: <strong>10–20 €</strong> · Asporto disponibile · Menù del giorno chiedendolo alla sala</p>
+    </section>
+
+    <section class="scene reviews" id="critiche" data-scene="04">
+      <div class="scene-head reveal">
+        <p class="kicker">scena 04</p>
+        <h2>La critica <em>è unanime</em>.</h2>
+        <p class="scene-sub">Migliaia di spettatori, un solo verdetto: si torna.</p>
+      </div>
+      <span class="scene-number" aria-hidden="true">04</span>
+
+      <div class="ratings">
+        <div class="rating reveal">
+          <span class="rating-score">4,5</span>
+          <div class="rating-stars" aria-hidden="true">★★★★<span class="star-half">★</span></div>
+          <p>Google — oltre 1.200 recensioni</p>
+        </div>
+        <div class="rating reveal">
+          <span class="rating-score">4,1</span>
+          <div class="rating-stars" aria-hidden="true">★★★★</div>
+          <p>Tripadvisor — 320+ recensioni</p>
+          <span class="rating-badge">Travelers' Choice</span>
+        </div>
+        <div class="rating reveal">
+          <span class="rating-score">4,7</span>
+          <div class="rating-stars" aria-hidden="true">★★★★<span class="star-half">★</span></div>
+          <p>Facebook — 76 recensioni</p>
+        </div>
+        <div class="rating reveal">
+          <span class="rating-score">4,6</span>
+          <div class="rating-stars" aria-hidden="true">★★★★<span class="star-half">★</span></div>
+          <p>Restaurant Guru — 1.600+ voti</p>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <figure class="quote reveal">
+          <blockquote>«Cibo ottimo a prezzi modici. Il menù offre davvero una varietà di prodotti di ogni tipo. Consiglio vivamente.»</blockquote>
+          <figcaption>— Gaia, recensione di sala</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote>«Non ne conoscevamo l'esistenza, scoperto per caso, ma torneremo sicuramente! Buon cibo a prezzi modici.»</blockquote>
+          <figcaption>— Sara, spettatrice di passaggio</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote>«Come sempre: locale con clima familiare, ottimo menù e prezzi ragionevoli.»</blockquote>
+          <figcaption>— Marco, abbonato</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote>«Locale ampio e pulito. Personale attento e simpatico. Porzioni gustose e abbondanti. Consigliato per coppie e famiglie.»</blockquote>
+          <figcaption>— Alessandro, pubblico affezionato</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote>«Personale attento, cibo buono e abbondante, con una gran scelta — naturalmente di primi: non solo pasta, anche risotti…»</blockquote>
+          <figcaption>— Vita, che ora prenota sempre</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <blockquote>«La pasta di mare è eccellente e il servizio impeccabile. Da non perdere a Oristano.»</blockquote>
+          <figcaption>— Viaggiatore dal Tripadvisor</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="scene info" id="sala" data-scene="05">
+      <div class="scene-head reveal">
+        <p class="kicker">scena 05</p>
+        <h2>La sala <em>vi aspetta</em>.</h2>
+        <p class="scene-sub">Trovate il vostro posto in prima fila.</p>
+      </div>
+      <span class="scene-number" aria-hidden="true">05</span>
+
+      <div class="info-grid">
+        <div class="info-card reveal">
+          <h3>Programmazione</h3>
+          <table class="hours">
+            <tbody>
+              <tr><td>Lunedì</td><td class="hours-closed">chiuso per montaggio</td></tr>
+              <tr><td>Martedì</td><td>13:00 – 14:45</td></tr>
+              <tr><td>Mercoledì</td><td>13:00 – 14:45 · 20:00 – 22:45</td></tr>
+              <tr><td>Giovedì</td><td>13:00 – 14:45 · 20:00 – 22:45</td></tr>
+              <tr><td>Venerdì</td><td>13:00 – 14:45 · 20:00 – 22:45</td></tr>
+              <tr><td>Sabato</td><td>13:00 – 14:45 · 20:00 – 22:45</td></tr>
+              <tr><td>Domenica</td><td>13:00 – 14:45</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-card reveal">
+          <h3>Il set</h3>
+          <address>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <span class="info-label">Indirizzo</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=39.91101180,8.59015960" target="_blank" rel="noopener">Via Umbria 5, 09170 Oristano (OR)</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <span class="info-label">Telefono</span>
+                <a href="tel:+390783210440">0783 210440</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <div>
+                <span class="info-label">E-mail</span>
+                <a href="mailto:samueleracis@gmail.com">samueleracis@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <div>
+                <span class="info-label">Facebook</span>
+                <a href="https://www.facebook.com/pages/Lo-Zen/198746466838331" target="_blank" rel="noopener">/LoZen</a>
+              </div>
+            </div>
+          </address>
+        </div>
+
+        <div class="info-card info-card-wide reveal">
+          <h3>Servizi in sala</h3>
+          <ul class="services">
+            <li>Asporto & take-away</li>
+            <li>Prenotazioni per famiglie e gruppi</li>
+            <li>Seggioloni per bambini</li>
+            <li>Menù per bambini</li>
+            <li>Accessibile in sedia a rotelle</li>
+            <li>Parcheggio gratuito nelle vicinanze</li>
+            <li>Carte di credito, debito e NFC</li>
+            <li>Cucina di mare e di terra</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal">
+        <iframe src="https://www.google.com/maps?q=39.91101180,8.59015960&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mappa — Lo Zen, Via Umbria 5, Oristano"></iframe>
+      </div>
+
+      <div class="cta-panel reveal">
+        <p class="cta-kicker">prossima proiezione</p>
+        <h3>Prenotate il vostro posto in prima fila.</h3>
+        <p>Una chiamata e il tavolo è vostro. Asporto, compleanni, cene di famiglia: la sala regge tutto — perfino gli spoiler sul dolce.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:+390783210440"><span class="btn-play">▶</span> 0783 210440</a>
+          <a class="btn btn-ghost" href="https://wa.me/390783210440?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20da%20Lo%20Zen" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="credits" id="contatti" data-scene="06">
+      <div class="credits-title reveal">
+        <span class="credits-kicker">titoli di coda</span>
+        <p class="credits-film">una produzione famiglia Racis</p>
+        <p class="credits-cast">con <strong>Cristina</strong> · <strong>Samuele</strong> · <strong>Federico</strong></p>
+        <p class="credits-line">fotografia: il mare di Oristano</p>
+        <p class="credits-line">musiche: il friggitore</p>
+        <p class="credits-line">nessun pesce è stato costretto a recitare</p>
+      </div>
+      <div class="credits-contact">
+        <a href="tel:+390783210440">0783 210440</a>
+        <span>·</span>
+        <a href="mailto:samueleracis@gmail.com">samueleracis@gmail.com</a>
+        <span>·</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=39.91101180,8.59015960" target="_blank" rel="noopener">Via Umbria 5, Oristano</a>
+      </div>
+      <p class="credits-end">Tornare è il miglior finale.</p>
+      <p class="credits-copy">© MMXXVI — Lo Zen · Spaghetteria · Oristano, Sardegna</p>
+      <a class="credits-top" href="#top">torna ai titoli di testa ↑</a>
+    </footer>
+
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

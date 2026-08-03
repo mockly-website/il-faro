@@ -866,3 +866,14 @@ body.js .reveal.in{opacity:1;transform:none}
   html{scroll-behavior:auto}
   body.js .reveal{opacity:1;transform:none}
 }
+
+.mockly-watermark{position:fixed;inset:0;z-index:99999;pointer-events:none;display:flex;align-items:center;justify-content:center}
+.mockly-watermark-inner{font-family:monospace;font-size:clamp(5rem,18vw,14rem);font-weight:700;letter-spacing:clamp(12px,4vw,40px);color:
+rgba(0,0,0,.04)
+;text-transform:uppercase;user-select:none;transform:rotate(-20deg);text-shadow:0 0 30px rgba(0,0,0,.02);animation:watermarkFade 3s ease-in-out infinite;text-align:center;line-height:1.1}
+.mockly-watermark-sub{display:block;font-size:clamp(.8rem,2.5vw,1.5rem);letter-spacing:clamp(6px,1.5vw,16px);margin-top:6px;opacity:.6}
+@keyframes watermarkFade{0%,100%{opacity:1}50%{opacity:.6}}
+
+.footer-credit{margin-top:1.2rem;font-size:.72rem;color:rgba(22,19,14,.55);text-align:center;letter-spacing:.08em}
+.footer-credit a{color:var(--tomato);text-decoration:none;font-weight:600}
+.footer-credit a:hover{text-decoration:underline}

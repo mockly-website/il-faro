@@ -59,21 +59,6 @@
   });
 
   const progressBar = document.getElementById("progressBar");
-  const sceneCounter = document.getElementById("sceneCounter");
-  const scenes = [...document.querySelectorAll("[data-scene]")];
-
-  const sceneObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const num = entry.target.dataset.scene.padStart(2, "0");
-          sceneCounter.textContent = `INQ ${num}`;
-        }
-      });
-    },
-    { threshold: 0.35 }
-  );
-  scenes.forEach((s) => sceneObserver.observe(s));
 
   function onScrollProgress() {
     const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -81,4 +66,53 @@
   }
   onScrollProgress();
   window.addEventListener("scroll", onScrollProgress, { passive: true });
+
+  const fab = document.getElementById("fab");
+  if (fab) {
+    const onScrollFab = () => fab.classList.toggle("show", window.scrollY > 320);
+    onScrollFab();
+    window.addEventListener("scroll", onScrollFab, { passive: true });
+  }
+
+  const lightbox = document.createElement("figure");
+  lightbox.className = "lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-label", "Immagine ingrandita");
+  lightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Chiudi">&times;</button>
+    <img alt="">
+    <figcaption></figcaption>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector("img");
+  const lightboxCap = lightbox.querySelector("figcaption");
+
+  function openLightbox(figure) {
+    const img = figure.querySelector("img");
+    const cap = figure.querySelector("figcaption");
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCap.textContent = cap ? cap.textContent.replace(/\s+/g, " ").trim() : "";
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+    lightboxImg.src = "";
+  }
+
+  document.querySelectorAll(".gallery-item").forEach((figure) => {
+    figure.addEventListener("click", () => openLightbox(figure));
+  });
+  lightbox.addEventListener("click", closeLightbox);
+  lightbox.querySelector(".lightbox-close").addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeLightbox();
+  });
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("open")) closeLightbox();
+  });
 })();

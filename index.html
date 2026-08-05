@@ -2,18 +2,18 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Lo Zen — Spaghetteria di famiglia a Oristano</title>
   <meta name="description" content="Lo Zen, la spaghetteria di famiglia di Oristano. Pasta di mare e di terra, porzioni abbondanti, prezzi onesti. Via Umbria 5 — Prenota: 0783 210440">
   <meta name="theme-color" content="#16130e">
   <meta property="og:title" content="Lo Zen — Spaghetteria a Oristano">
   <meta property="og:description" content="Cucina di mare e di terra. Non solo spaghetteria. Via Umbria 5, Oristano.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -21,7 +21,6 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-  <div class="frame-counter" aria-hidden="true"><span id="sceneCounter">INQ 01</span><span id="sceneTotal">/ 06</span></div>
 
   <div class="preloader" id="preloader" aria-hidden="true">
     <p class="preloader-brand">LO<span>·</span>ZEN</p>
@@ -33,10 +32,10 @@
     <a href="#top" class="brand" aria-label="Lo Zen — torna all'inizio">
       LO ZEN
       <small>spaghetteria · oristano</small>
-    </a>
-    <nav class="nav" aria-label="Navigazione principale">
+    </a>    <nav class="nav" aria-label="Navigazione principale">
       <a href="#storia">La storia</a>
       <a href="#menu">Il menù</a>
+      <a href="#foto">Le foto</a>
       <a href="#critiche">La critica</a>
       <a href="#sala">La sala</a>
       <a class="nav-cta" href="https://wa.me/390783210440?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20da%20Lo%20Zen" target="_blank" rel="noopener">
@@ -49,21 +48,27 @@
     </button>
   </header>
 
+  <a class="fab" id="fab" href="https://wa.me/390783210440?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20da%20Lo%20Zen" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Prenota
+  </a>
+
   <div class="menu-mobile" id="menuMobile" hidden>
     <nav aria-label="Navigazione mobile">
       <a href="#storia"><em>01</em>La storia</a>
       <a href="#menu"><em>02</em>Il menù</a>
-      <a href="#critiche"><em>03</em>La critica</a>
-      <a href="#sala"><em>04</em>La sala</a>
+      <a href="#foto"><em>03</em>Le foto</a>
+      <a href="#critiche"><em>04</em>La critica</a>
+      <a href="#sala"><em>05</em>La sala</a>
       <a class="menu-mobile-cta" href="https://wa.me/390783210440?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20da%20Lo%20Zen" target="_blank" rel="noopener">Prenota un tavolo</a>
     </nav>
   </div>
 
   <main id="top">
 
-    <section class="scene hero" id="hero" data-scene="01">
+    <section class="scene hero" id="hero">
       <div class="hero-inner">
-        <p class="hero-overline reveal">una produzione della famiglia Racis · oristano, sardegna</p>
+        <p class="hero-overline reveal">dalla famiglia Racis · oristano, sardegna</p>
         <h1 class="hero-title">
           <span class="hero-lo outline-text reveal">LO</span>
           <span class="hero-zen reveal">ZEN</span>
@@ -81,31 +86,13 @@
         </div>
         <div class="hero-actions reveal">
           <a class="btn btn-primary" href="https://wa.me/390783210440?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20da%20Lo%20Zen" target="_blank" rel="noopener">
-            <span class="btn-play">▶</span> Ciak — prenota un tavolo
+            Prenota un tavolo
           </a>
-          <a class="btn btn-ghost" href="#storia">Scorri i titoli di testa ↓</a>
-        </div>
-        <div class="hero-svg" aria-hidden="true">
-          <svg viewBox="0 0 320 320">
-            <g class="swirl">
-              <path d="M160 60 c 46 6 58 52 24 70 c -38 20 -88 -16 -62 -58 c 22 -36 88 -18 84 34 c -3 48 -72 56 -96 18 c -24 -40 18 -88 62 -74" fill="none" stroke="#f2ead9" stroke-width="7" stroke-linecap="round"/>
-              <path d="M160 60 c 46 6 58 52 24 70 c -38 20 -88 -16 -62 -58 c 22 -36 88 -18 84 34 c -3 48 -72 56 -96 18 c -24 -40 18 -88 62 -74" fill="none" stroke="#c83e1f" stroke-width="3" stroke-linecap="round"/>
-            </g>
-            <g class="fork">
-              <path d="M118 118 L126 214" stroke="#f2ead9" stroke-width="9" stroke-linecap="round"/>
-              <path d="M142 118 L150 214" stroke="#f2ead9" stroke-width="9" stroke-linecap="round"/>
-              <path d="M166 118 L174 214" stroke="#f2ead9" stroke-width="9" stroke-linecap="round"/>
-              <path d="M190 118 L198 214" stroke="#f2ead9" stroke-width="9" stroke-linecap="round"/>
-              <path d="M102 118 C 102 88 206 88 206 118 L 202 128 C 198 104 110 104 106 128 Z" fill="#f2ead9"/>
-              <path d="M104 128 C 104 122 204 122 204 128 L 202 134 L 106 134 Z" fill="#f2ead9"/>
-            </g>
-            <circle cx="232" cy="118" r="6" fill="#c83e1f"/>
-            <circle cx="84" cy="150" r="5" fill="#c29a4b"/>
-          </svg>
+          <a class="btn btn-ghost" href="#storia">Scopri la storia ↓</a>
         </div>
       </div>
       <div class="scroll-cue" aria-hidden="true">
-        <span>Inquadratura 01 — scorri</span>
+        <span>scorri</span>
         <span class="scroll-line"></span>
       </div>
       <div class="letterbox letterbox-bottom" aria-hidden="true"></div>
@@ -132,14 +119,11 @@
       </div>
     </div>
 
-    <div class="filmstrip" aria-hidden="true"></div>
-
-    <section class="scene story" id="storia" data-scene="02">
+    <section class="scene story" id="storia">
       <div class="scene-head reveal">
-        <p class="kicker">scena 02</p>
+        <p class="kicker">la storia</p>
         <h2>Tre fratelli, un'isola, <em>un piatto</em>.</h2>
       </div>
-      <span class="scene-number" aria-hidden="true">02</span>
 
       <div class="story-body">
         <p class="story-lead reveal">
@@ -148,8 +132,8 @@
         </p>
         <p class="story-text reveal">
           Qui il pesce arriva al mattino dal mercato, la bottarga profuma di stagione e ogni piatto
-          viene girato in un'unica scena: la tua tavola. Porzioni da protagonista, prezzi da
-          comparsa onesta, e una regola che non è mai andata in doppia: <em>mangiare bene deve restare semplice.</em>
+          arriva in tavola fresco, abbondante e sincero. Porzioni da protagonisti, prezzi onesti,
+          e una regola che non è mai cambiata: <em>mangiare bene deve restare semplice.</em>
         </p>
         <blockquote class="story-quote reveal">
           <p>«Non solo spaghetteria!!»</p>
@@ -159,19 +143,19 @@
 
       <div class="cast">
         <article class="cast-card reveal">
-          <div class="cast-role">regia</div>
+          <div class="cast-role">accoglienza</div>
           <div class="cast-monogram" aria-hidden="true">C</div>
           <h3>Cristina Racis</h3>
-          <p>La padrona di casa. La sala è il suo set: accoglie, ricorda i nomi, non lascia mai un tavolo senza attenzione.</p>
+          <p>La padrona di casa. Accoglie, ricorda i nomi, non lascia mai un tavolo senza attenzione.</p>
         </article>
         <article class="cast-card reveal">
-          <div class="cast-role">fotografia</div>
+          <div class="cast-role">i fornelli</div>
           <div class="cast-monogram" aria-hidden="true">S</div>
           <h3>Samuele Racis</h3>
           <p>Tra i fornelli, il mare di Sardegna diventa sugo. Niente mezze misure: il piatto o è da protagonista, o non esce.</p>
         </article>
         <article class="cast-card reveal">
-          <div class="cast-role">montaggio</div>
+          <div class="cast-role">il servizio</div>
           <div class="cast-monogram" aria-hidden="true">F</div>
           <h3>Federico Racis</h3>
           <p>L'uomo di sala. Insieme ai fratelli tiene viva la promessa del locale: mangiare bene, pagare onesto.</p>
@@ -179,99 +163,104 @@
       </div>
     </section>
 
-    <section class="scene menu" id="menu" data-scene="03">
+    <div class="pasta-wave" aria-hidden="true">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" focusable="false">
+        <path d="M0 26 C 60 46 120 6 180 26 C 240 46 300 6 360 26 C 420 46 480 6 540 26 C 600 46 660 6 720 26 C 780 46 840 6 900 26 C 960 46 1020 6 1080 26 C 1140 46 1200 8 1200 26" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <path d="M0 20 C 60 4 120 42 180 20 C 240 4 300 42 360 20 C 420 4 480 42 540 20 C 600 4 660 42 720 20 C 780 4 840 42 900 20 C 960 4 1020 42 1080 20 C 1140 4 1200 42 1200 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+      </svg>
+    </div>
+
+    <section class="scene menu" id="menu">
       <div class="scene-head reveal">
-        <p class="kicker">scena 03</p>
-        <h2>La filmografia <em>del gusto</em>.</h2>
-        <p class="scene-sub">Il menù cambia come le scene di un film: chiedete alla sala cosa gira oggi.</p>
+        <p class="kicker">il menù</p>
+        <h2>Il menù <em>del gusto</em>.</h2>
+        <p class="scene-sub">Il menù cambia con la stagione e il mercato: chiedete alla sala cosa c'è oggi.</p>
       </div>
-      <span class="scene-number" aria-hidden="true">03</span>
 
       <div class="menu-columns">
         <div class="menu-column reveal">
-          <h3 class="menu-cat">Primi <small>le scene madri</small></h3>
+          <h3 class="menu-cat">Primi <small>i protagonisti</small></h3>
           <details class="dish">
-            <summary>Spaghetti allo Scoglio <span class="dish-tag">bestseller</span></summary>
+            <summary><span class="dish-name">Spaghetti allo Scoglio</span><span class="dish-tag">bestseller</span><span class="dish-price">€ 14</span></summary>
             <p>Il protagonista. Il mare, tutto intero, in un piatto: cozze, arselle, seppie e un filo di olio che non discute.</p>
           </details>
           <details class="dish">
-            <summary>Spaghetti con Arselle e Bottarga</summary>
+            <summary><span class="dish-name">Spaghetti con Arselle e Bottarga</span><span class="dish-price">€ 12</span></summary>
             <p>La rivelazione. Il giallo della bottarga sopra il sale delle arselle: un sospetto solo — quanto sarà buono?</p>
           </details>
           <details class="dish">
-            <summary>Risotto alla Pescatora <span class="dish-tag">bestseller</span></summary>
-            <p>L'antagonista gentile. Cremoso, profondo, senza fretta: un lungo piano sequenza sul palato.</p>
+            <summary><span class="dish-name">Risotto alla Pescatora</span><span class="dish-tag">bestseller</span><span class="dish-price">€ 13</span></summary>
+            <p>Cremoso, profondo, senza fretta: un'onda lunga e dorata sul palato.</p>
           </details>
           <details class="dish">
-            <summary>Spaghetti ai Frutti di Mare</summary>
-            <p>Compagnia di scena al completo: vongole, cozze, gamberi e seppie in un'interpretazione corale.</p>
+            <summary><span class="dish-name">Spaghetti ai Frutti di Mare</span><span class="dish-price">€ 13</span></summary>
+            <p>Tutta la compagnia del mare: vongole, cozze, gamberi e seppie, insieme in un solo piatto.</p>
           </details>
           <details class="dish">
-            <summary>Spaghetti al Tonno e Cipolla</summary>
-            <p>Scena di mare, girata in terra. Dolce, sapida, memorabile. Il classico che non invecchia.</p>
+            <summary><span class="dish-name">Spaghetti al Tonno e Cipolla</span><span class="dish-price">€ 9</span></summary>
+            <p>Gusto di mare, profumi di terra. Dolce, sapida, memorabile. Il classico che non invecchia.</p>
           </details>
           <details class="dish">
-            <summary>Mezze Penne all'Aragostine</summary>
-            <p>Un cameo da copertina: la pasta corta che ruba la scena ai più famosi.</p>
+            <summary><span class="dish-name">Mezze Penne all'Aragostine</span><span class="dish-price">€ 11</span></summary>
+            <p>L'ospite d'onore: la pasta corta che non sfigura accanto ai grandi.</p>
           </details>
           <details class="dish">
-            <summary>Pasta Panna e Salmone</summary>
+            <summary><span class="dish-name">Pasta Panna e Salmone</span><span class="dish-price">€ 10</span></summary>
             <p>Il cavallo di battaglia del pubblico: morbido, rosa, confortevole come un film di sempre.</p>
           </details>
           <details class="dish">
-            <summary>Spaghetti alla Carbonara <span class="dish-tag">cult</span></summary>
-            <p>Il cult senza compromessi, come da manuale romano. Il pubblico lo chiede sempre, ed è sempre lì.</p>
+            <summary><span class="dish-name">Spaghetti alla Carbonara</span><span class="dish-tag">cult</span><span class="dish-price">€ 8</span></summary>
+            <p>Il classico senza compromessi, come da manuale romano. Il pubblico lo chiede sempre, ed è sempre lì.</p>
           </details>
           <details class="dish">
-            <summary>Spaghetti all'Arrabbiata</summary>
-            <p>Quando la pellicola si fa piccante. Da guardare con un bicchiere di vino della casa a portata di mano.</p>
+            <summary><span class="dish-name">Spaghetti all'Arrabbiata</span><span class="dish-price">€ 7,50</span></summary>
+            <p>Quando il piatto si fa piccante. Da gustare con un bicchiere di vino della casa a portata di mano.</p>
           </details>
         </div>
 
         <div class="menu-column reveal">
-          <h3 class="menu-cat">Dal mare <small>gli esterni</small></h3>
+          <h3 class="menu-cat">Dal mare <small>direttamente dal mercato</small></h3>
           <details class="dish">
-            <summary>Fregola con le Arselle</summary>
-            <p>La tradizione sarda in prima visione. Granelli d'oro che affondano in un brodo che sa di isola.</p>
+            <summary><span class="dish-name">Fregola con le Arselle</span><span class="dish-price">€ 11</span></summary>
+            <p>La tradizione sarda, servita come si deve. Granelli d'oro che affondano in un brodo che sa di isola.</p>
           </details>
           <details class="dish">
-            <summary>Zuppa di Cozze in Rosso</summary>
-            <p>In rosso, come il tappeto di un festival. Con pane da intingere e zero rimorsi.</p>
+            <summary><span class="dish-name">Zuppa di Cozze in Rosso</span><span class="dish-price">€ 10</span></summary>
+            <p>In rosso, come piace a noi. Con pane da intingere e zero rimorsi.</p>
           </details>
           <details class="dish">
-            <summary>Frittura di Calamari <span class="dish-tag">bestseller</span></summary>
+            <summary><span class="dish-name">Frittura di Calamari</span><span class="dish-tag">bestseller</span><span class="dish-price">€ 10</span></summary>
             <p>La colonna sonora croccante del locale. Si comincia, non si smette più.</p>
           </details>
-          <h3 class="menu-cat menu-cat-second">Terra & dolci <small>i lieti fini</small></h3>
+          <h3 class="menu-cat menu-cat-second">Terra & dolci <small>per chiudere in dolcezza</small></h3>
           <details class="dish">
-            <summary>Bistecca di Cavallo</summary>
-            <p>Il secondo che non ti aspetti, e che non dimentichi. Per chi ama le svolte di sceneggiatura.</p>
+            <summary><span class="dish-name">Bistecca di Cavallo</span><span class="dish-price">€ 14</span></summary>
+            <p>Il secondo che non ti aspetti, e che non dimentichi. Per chi ama le sorprese a tavola.</p>
           </details>
           <details class="dish">
-            <summary>Seadas al Miele <span class="dish-tag">finale</span></summary>
-            <p>Finale dolce, di quelli sardi veri: formaggio fuso, miele caldo, applausi garantiti.</p>
+            <summary><span class="dish-name">Seadas al Miele</span><span class="dish-tag">dolce</span><span class="dish-price">€ 6</span></summary>
+            <p>Dolce, di quelli sardi veri: formaggio fuso, miele caldo, applausi garantiti.</p>
           </details>
           <details class="dish">
-            <summary>Tiramisù della casa</summary>
-            <p>Il lieto fine per eccellenza. Soffice, goloso, senza colpe.</p>
+            <summary><span class="dish-name">Tiramisù della casa</span><span class="dish-price">€ 5</span></summary>
+            <p>La conclusione perfetta. Soffice, golosa, senza colpe.</p>
           </details>
           <details class="dish">
-            <summary>Panna Cotta</summary>
-            <p>I titoli di coda, in versione morbida. Da gustare lentamente.</p>
+            <summary><span class="dish-name">Panna Cotta</span><span class="dish-price">€ 4,50</span></summary>
+            <p>La conclusione, in versione morbida. Da gustare lentamente.</p>
           </details>
         </div>
       </div>
 
-      <p class="menu-footnote reveal">Prezzo medio a persona: <strong>10–20 €</strong> · Asporto disponibile · Menù del giorno chiedendolo alla sala</p>
+      <p class="menu-footnote reveal">Prezzi indicativi · Prezzo medio a persona: <strong>10–20 €</strong> · Asporto disponibile · Menù del giorno chiedendolo alla sala</p>
     </section>
 
-    <section class="scene reviews" id="critiche" data-scene="04">
+    <section class="scene reviews" id="critiche">
       <div class="scene-head reveal">
-        <p class="kicker">scena 04</p>
+        <p class="kicker">la critica</p>
         <h2>La critica <em>è unanime</em>.</h2>
-        <p class="scene-sub">Migliaia di spettatori, un solo verdetto: si torna.</p>
+        <p class="scene-sub">Migliaia di ospiti, un solo verdetto: si torna.</p>
       </div>
-      <span class="scene-number" aria-hidden="true">04</span>
 
       <div class="ratings">
         <div class="rating reveal">
@@ -325,20 +314,69 @@
       </div>
     </section>
 
-    <section class="scene info" id="sala" data-scene="05">
+    <section class="scene gallery" id="foto">
       <div class="scene-head reveal">
-        <p class="kicker">scena 05</p>
-        <h2>La sala <em>vi aspetta</em>.</h2>
-        <p class="scene-sub">Trovate il vostro posto in prima fila.</p>
+        <p class="kicker">la fotografia</p>
+        <h2>Fotografie <em>di scena</em>.</h2>
+        <p class="scene-sub">Foto vere, scattate a tavola: non mentono mai. Clicca per ingrandire.</p>
       </div>
-      <span class="scene-number" aria-hidden="true">05</span>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal">
+          <img src="img/gallery/carbonara.jpg" alt="Spaghetti alla carbonara serviti al tavolo da Lo Zen" loading="lazy">
+          <figcaption><span>scatto 01</span>la carbonara, sempre sul menù</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/gallery/scoglio-dishes.jpg" alt="Primi piatti di pesce pronti in sala" loading="lazy">
+          <figcaption><span>scatto 02</span>i primi, i veri protagonisti</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/gallery/risotto.jpg" alt="Risotto alla pescatora cremoso" loading="lazy">
+          <figcaption><span>scatto 03</span>risotto alla pescatora</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/gallery/riso.jpg" alt="Riso del giorno preparato dai fratelli Racis" loading="lazy">
+          <figcaption><span>scatto 04</span>il riso del giorno</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/gallery/mare.jpg" alt="Piatto di mare fresco servito da Lo Zen" loading="lazy">
+          <figcaption><span>scatto 05</span>dal mercato alla tavola</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/gallery/formaggio.jpg" alt="Pasta al formaggio della casa" loading="lazy">
+          <figcaption><span>scatto 06</span>coccole di formaggio</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/gallery/sala.jpg" alt="La sala del ristorante Lo Zen a Oristano" loading="lazy">
+          <figcaption><span>scatto 07</span>la sala, cuore del locale</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img/gallery/ingresso.jpg" alt="L'ingresso della spaghetteria Lo Zen in via Umbria" loading="lazy">
+          <figcaption><span>scatto 08</span>via Umbria 5, il nostro indirizzo</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="pasta-wave" aria-hidden="true">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" focusable="false">
+        <path d="M0 26 C 60 46 120 6 180 26 C 240 46 300 6 360 26 C 420 46 480 6 540 26 C 600 46 660 6 720 26 C 780 46 840 6 900 26 C 960 46 1020 6 1080 26 C 1140 46 1200 8 1200 26" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <path d="M0 20 C 60 4 120 42 180 20 C 240 4 300 42 360 20 C 420 4 480 42 540 20 C 600 4 660 42 720 20 C 780 4 840 42 900 20 C 960 4 1020 42 1080 20 C 1140 4 1200 42 1200 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+      </svg>
+    </div>
+
+    <section class="scene info" id="sala">
+      <div class="scene-head reveal">
+        <p class="kicker">la sala</p>
+        <h2>La sala <em>vi aspetta</em>.</h2>
+        <p class="scene-sub">Trovate il vostro posto a tavola.</p>
+      </div>
 
       <div class="info-grid">
         <div class="info-card reveal">
-          <h3>Programmazione</h3>
+          <h3>Orari di apertura</h3>
           <table class="hours">
             <tbody>
-              <tr><td>Lunedì</td><td class="hours-closed">chiuso per montaggio</td></tr>
+              <tr><td>Lunedì</td><td class="hours-closed">chiuso</td></tr>
               <tr><td>Martedì</td><td>13:00 – 14:45</td></tr>
               <tr><td>Mercoledì</td><td>13:00 – 14:45 · 20:00 – 22:45</td></tr>
               <tr><td>Giovedì</td><td>13:00 – 14:45 · 20:00 – 22:45</td></tr>
@@ -350,7 +388,7 @@
         </div>
 
         <div class="info-card reveal">
-          <h3>Il set</h3>
+          <h3>Contatti</h3>
           <address>
             <div class="info-row">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -403,24 +441,24 @@
       </div>
 
       <div class="cta-panel reveal">
-        <p class="cta-kicker">prossima proiezione</p>
-        <h3>Prenotate il vostro posto in prima fila.</h3>
-        <p>Una chiamata e il tavolo è vostro. Asporto, compleanni, cene di famiglia: la sala regge tutto — perfino gli spoiler sul dolce.</p>
+        <p class="cta-kicker">pronti a tavola</p>
+        <h3>Prenotate il vostro posto.</h3>
+        <p>Un messaggio e il tavolo è vostro. Asporto, compleanni, cene di famiglia: la sala regge tutto — perfino chi non sa scegliere il dolce.</p>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="https://wa.me/390783210440?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20da%20Lo%20Zen" target="_blank" rel="noopener"><span class="btn-play">▶</span> Prenota su WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.me/390783210440?text=Salve%2C%20vorrei%20prenotare%20un%20tavolo%20da%20Lo%20Zen" target="_blank" rel="noopener">Prenota su WhatsApp</a>
           <a class="btn btn-ghost" href="tel:+390783210440">oppure chiama · 0783 210440</a>
         </div>
       </div>
     </section>
 
-    <footer class="credits" id="contatti" data-scene="06">
+    <footer class="credits" id="contatti">
       <div class="credits-title reveal">
-        <span class="credits-kicker">titoli di coda</span>
-        <p class="credits-film">una produzione famiglia Racis</p>
+        <span class="credits-kicker">arrivederci</span>
+        <p class="credits-film">la spaghetteria di famiglia</p>
         <p class="credits-cast">con <strong>Cristina</strong> · <strong>Samuele</strong> · <strong>Federico</strong></p>
         <p class="credits-line">fotografia: il mare di Oristano</p>
         <p class="credits-line">musiche: il friggitore</p>
-        <p class="credits-line">nessun pesce è stato costretto a recitare</p>
+        <p class="credits-line">nessun pesce ha mai aspettato a lungo</p>
       </div>
       <div class="credits-contact">
         <a href="tel:+390783210440">0783 210440</a>
@@ -429,15 +467,15 @@
         <span>·</span>
         <a href="https://www.google.com/maps/search/?api=1&query=39.91101180,8.59015960" target="_blank" rel="noopener">Via Umbria 5, Oristano</a>
       </div>
-      <p class="credits-end">Tornare è il miglior finale.</p>
+      <p class="credits-end">Tornare è sempre una buona idea.</p>
       <p class="credits-copy">© MMXXVI — Lo Zen · Spaghetteria · Oristano, Sardegna</p>
-      <a class="credits-top" href="#top">torna ai titoli di testa ↑</a>
+      <a class="credits-top" href="#top">torna su ↑</a>
     <p class="footer-credit">Realizzato da <a href="https://mockly.it" target="_blank" rel="noopener">Mockly</a></p>
 </footer>
 
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <script src="js/main.js"></script>
 <div class="mockly-watermark"><div class="mockly-watermark-inner">MOCKLY<span class="mockly-watermark-sub">SITO IN SVILUPPO</span></div></div>
 </body>
 </html>

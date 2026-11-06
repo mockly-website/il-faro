@@ -1,0 +1,8 @@
+/* Ritocchi di leggibilità (revisione Mockly, novembre 2026). */
+.credits-contact a, .credits-top { display: inline-block; padding-block: 0.55rem; }
+.credits-contact span { opacity: .7; }
+.brand { padding-block: 4px; }
+.credits-end { color: #d4a85a; }
+@media (max-width: 760px) {
+  .btn { font-size: 0.9rem; padding-block: 1rem; }
+}
